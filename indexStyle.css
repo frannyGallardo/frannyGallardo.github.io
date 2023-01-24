@@ -8,23 +8,23 @@ ul {
     background-color: darkcyan;
     }
   
-  li {
+li {
     float: left;
     }
   
-  li a {
+li a {
     display: block;
-    font: Helvetica;
+    font: Helvetica, sans_serif;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     }
   
-  li a:hover {
+li a:hover {
     background-color: #111;
     }
   
-  .active {
+.active {
     background-color: #04AA6D;
     }
