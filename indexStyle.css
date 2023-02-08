@@ -1,6 +1,6 @@
 /* https://www.w3schools.com/css/css_navbar.asp */
 
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,22 +8,19 @@ ul {
     background-color: firebrick;
 }
 
-li {
-    float: left;
-    }
-
-li a {
+.tab {
     display: block;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-style: italic;
     font-weight: bold;
     color: white;
     text-align: center;
+    float: left;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-li a:hover {
+.tab:hover {
     background-color: crimson;
 }
 
