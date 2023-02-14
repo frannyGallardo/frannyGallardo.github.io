@@ -10,7 +10,8 @@ body {
 }
 
 .headerImg {
-    height: 10vh;
+    height: 15vw;
+    max-height: 150px;
 }
 
 .navbar {
