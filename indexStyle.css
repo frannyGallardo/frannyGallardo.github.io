@@ -1,5 +1,13 @@
 /* https://www.w3schools.com/css/css_navbar.asp */
 
+body {
+    background-color: floralwhite;
+}
+
+.headerImg {
+    height: 150px;
+}
+
 .navbar {
     list-style-type: none;
     margin: 0;
