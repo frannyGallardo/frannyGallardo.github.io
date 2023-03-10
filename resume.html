@@ -1,3 +1,5 @@
+<!-- references: https://jgbm.github.io/ -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,10 +7,53 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Resume</title>
+        <title>FG - Resume</title>
         <link rel="stylesheet" href="indexStyle.css">
     </head>
-    <body>
+
+    <style>        
+        .entry {
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+
+        .date {
+            width: 200px;
+            text-align: center;
+        }
+
+        .description {
+            text-align: left;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function toggle(block) {
+            var list = document.getElementById(block);
+            var closed = document.getElementById(block + "-closed");
+            var open = document.getElementById(block + "-open");
+            if (window.getComputedStyle(list).display == "none") {
+                list.style.display = "block";
+                closed.style.display = "none";
+                open.style.display = "inline-block";
+            } else {
+                list.style.display = "none";
+                closed.style.display = "inline-block";
+                open.style.display = "none";
+            }
+        }
+
+        function toggleAll() {
+            var courses = ["cs", "mus", "calli", "trans"]
+            var len = courses.length;
+            for (i = 0; i < len; i++) {
+                toggle(courses[i]);
+            }
+        }
+    </script>
+
+    <body onload="toggleAll()">
         <div class="header">
             <img class=headerImg src="images\logoTransparent.PNG">
             <img class=headerImg src="images\calligraphyName.png">
@@ -21,16 +66,92 @@
         </nav>
        
         <div id="education">
-            <h2>Education</h2>
+            <h1>Education</h1>
+            <div class="entry">
+                <div class="date">
+                    <p>August 2018 - December 2021</p>
+                </div>
+                <div class="description">
+                    <p>University of Iowa, Iowa City, IA</p>
+                    <p>Bachelor of Science in Computer Science, Minor in Music</p>
+                    <p>Cumulative GPA: 3.53</p>
+                    <p>University Dean's List: Fall 2019, Spring 2021, Fall 2021</p>
+                    
+                    <p class="coursework" onclick="toggle('cs')">
+                        <span id="cs-closed" style="display: inline-block;">▷</span>
+                        <span id="cs-open" style="display: inline-block;">▽</span>
+                        Computer Science coursework
+                    </p>
+                    <div id="cs" style="display: block;">
+                        <ul class="courselist">
+                            <li>CS: 2210 - Discrete Structures</li>
+                            <li>CS: 2230 - Computer Science II: Data Structures</li>
+                            <li>CS: 2630 - Computer Organization</li>
+                            <li>CS: 2820 - Object-Oriented Software Development</li>
+                            <li>CS: 3330 - Algorithms</li>
+                            <li>CS: 3700 - Elementary Numerical Analysis</li>
+                            <li>CS: 3620 - Operating Systems</li>
+                            <li>CS: 3640 - Intro to Networks and Their Applications</li>
+                            <li>CS: 4350 - Logic in Computer Science</li>
+                            <li>CS: 4400 - Database Systems</li>
+                            <li>CS: 4980 - Topics in Computer Science II <i>Cryptography</i></li>
+                            <li>CS: 3820 - Programming Language Concepts</li>
+                        </ul>
+                    </div>
+
+                    <p class="coursework" onclick="toggle('mus')">
+                        <span id="mus-closed" style="display: inline-block;">▷</span>
+                        <span id="mus-open" style="display: inline-block;">▽</span>
+                        Music coursework
+                    </p>
+                    <div id="mus" style="display: block;">
+                        <ul class="courselist">
+                            <li>MUS: 1180 - All-University String Orchestra</li>
+                            <li>MUS: 3489 - Chamber Music Residency Program (6 semesters)</li>
+                            <li>MUS: 1020 - Performance Instruction for Non-Majors <i>Viola</i> (3 semesters)</li>
+                            <li>MUS: 2301 - History of Western Music I</li>
+                            <li>MUS: 2302 - History of Western Music II</li>
+                        </ul>
+                    </div>
+
+                    <p class="coursework" onclick="toggle('calli')">
+                        <span id="calli-closed" style="display: inline-block;">▷</span>
+                        <span id="calli-open" style="display: inline-block;">▽</span>
+                        Calligraphy coursework
+                    </p>
+                    <div id="calli" style="display: block;">
+                        <ul class="courselist">
+                            <li>ARTS: 4415 - Calligraphy I: Foundational Hands</li>
+                            <li>UICB: 4420 - Calligraphy I: Blackletter Hands</li>
+                        </ul>
+                    </div>
+
+                    <p class="coursework" onclick="toggle('trans')">
+                        <span id="trans-closed" style="display: inline-block;">▷</span>
+                        <span id="trans-open" style="display: inline-block;">▽</span>
+                        Translation coursework
+                    </p>
+                    <div id="trans" style="display: block;">
+                        <ul class="courselist">
+                            <li>TRNS: 2000 - Translation and Global Society</li>
+                            <li>CLSA: 3979 - Undergraduate Translation Workshop</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        
         <div id="work">
-            <h2>Work Experience</h2>
+            <h1>Work Experience</h1>
         </div>
+        
         <div id="volunteering">
-            <h2>Volunteering</h2>
+            <h1>Volunteering</h1>
         </div>
+        
         <div id="activities">
-            <h2>Activities and Interests</h2>
+            <h1>Activities and Interests</h1>
         </div>
     </body>
 </html>
