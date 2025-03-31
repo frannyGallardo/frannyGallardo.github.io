@@ -1,5 +1,17 @@
-/* https://www.w3schools.com/css/css_navbar.asp */
-/* https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+/*
+https://www.w3schools.com/css/css_navbar.asp
+https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
+https://www.freecodecamp.org/news/how-to-create-a-mansory-layout-using-html-and-css/
+
+https://freefrontend.com/css-masonry-layout-examples/
+https://codepen.io/CyFox/pen/MWWEwjg
+
+https://stackoverflow.com/questions/44377343/css-only-masonry-layout
+https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
+
+https://www.youtube.com/watch?v=_IAFA2kA840&t=86s
+https://masonry.desandro.com/
+*/
 
 body {
     background-color: floralwhite;
@@ -45,20 +57,22 @@ body {
     background-color: black;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+.grid {
+    background: #DDD;
 }
 
-.column {
-    flex: 1;
-    max-width: 25%;
-    padding: 0 4px;
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
 }
