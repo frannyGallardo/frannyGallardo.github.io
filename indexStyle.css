@@ -57,10 +57,6 @@ body {
     background-color: black;
 }
 
-.grid {
-    background: #DDD;
-}
-
 .grid:after {
     content: '';
     display: block;

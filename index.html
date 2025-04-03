@@ -19,7 +19,7 @@
             <a class="tab" href="calligraphy.html">Calligraphy</a>
         </nav>
 
-        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": "true" }'>
+        <div class="grid">
             <div class="grid-sizer"></div>
             <div class="grid-item"><img src="images\photos\DSCF9437.JPG"></div>
             <div class="grid-item"><img src="images\photos\DSCF9501.JPG"></div>
@@ -52,6 +52,24 @@
             <div class="grid-item"><img src="images\photos\DSCF7293c.JPG"></div>
         </div>
 
+        <!--https://codepen.io/desandro/pen/MwJoZQ-->
         <script src="\packages\masonry.pkgd.js"></script>
+        <script src="\packages\imagesloaded.pkgd.js"></script>
+        
+        <script>
+            var grid = document.querySelector('.grid');
+            
+            var msnry = new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                percentPosition: true
+            });
+
+            imagesLoaded(grid).on('progress',
+                function() {
+                    msnry.layout();
+                }
+            );
+        </script>
     </body>
 </html>
