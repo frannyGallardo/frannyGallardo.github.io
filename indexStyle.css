@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     background-color: firebrick;
 }
@@ -63,9 +63,19 @@ body {
     clear: both;
 }
 
+/* https://stackoverflow.com/questions/779434/how-do-i-prevent-the-padding-property-from-changing-width-or-height-in-css */
 .grid-sizer,
 .grid-item {
+    box-sizing: border-box;
     width: 33.333%;
+}
+
+.grid-item {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    float: left;
 }
 
 .grid-item img {
