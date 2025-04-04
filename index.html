@@ -21,34 +21,30 @@
 
         <div class="grid">
             <div class="grid-sizer"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9437.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9501.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9360.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9283.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9272.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF9231.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8988.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8913.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8745.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8655.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8635.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8518.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8448.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8417.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8351.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8345.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8311.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8223.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8149.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8064.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF8002.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7931.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7869.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7785.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7760.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7628.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7439.JPG"></div>
-            <div class="grid-item"><img src="images\photos\DSCF7359.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF9501c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF9437c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF9283c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF9272c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF9231c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8988c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8913c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8745c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8635c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8518c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8448c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8417c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8351c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8345c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8311c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8223c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8149c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF8064c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7931c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7869c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7785c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7760c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7439c.JPG"></div>
+            <div class="grid-item"><img src="images\photos\DSCF7359c.JPG"></div>
             <div class="grid-item"><img src="images\photos\DSCF7293c.JPG"></div>
         </div>
 
@@ -59,7 +55,7 @@
         <script>
             var grid = document.querySelector('.grid');
             
-            var msnry = new Masonry(grid, {
+            var mason = new Masonry(grid, {
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',
                 percentPosition: true
@@ -67,7 +63,7 @@
 
             imagesLoaded(grid).on('progress',
                 function() {
-                    msnry.layout();
+                    mason.layout();
                 }
             );
         </script>
