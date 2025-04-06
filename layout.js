@@ -13,18 +13,7 @@ imagesLoaded(grid).on('progress',
 );
 
 function resizeTime() {
-    var screenWidth = window.innerWidth;
-    var percentage;
-
-    if (screenWidth <= 800) {
-        percentage = '100%';
-    }
-    else if (screenWidth < 1600){
-        percentage = '50%';
-    }
-    else {
-        percentage = '33.333%';
-    }
+    var percentage = (100 / Math.ceil(window.innerWidth / 800)).toFixed(3).toString() + "%";
 
     document.querySelector('.grid-sizer').style.setProperty('width', percentage);
 
