@@ -9,6 +9,7 @@ var mason = new Masonry(grid, {
 imagesLoaded(grid).on('progress',
     function() {
         mason.layout();
+        // resizeTime();
     }
 );
 
